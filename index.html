@@ -16,8 +16,8 @@
             Expense Tracker
         </h1>
         <div class="flex justify-evenly max-[790px]:hidden space-x-10">
-            <a class=" text-gray-950 text-[1rem] font-[400] hover:underline" href="#">Profiles</a>
-            <a class=" text-gray-950 text-[1rem] font-[400] hover:underline" href="#">Transactions</a>
+            <a class=" text-gray-950 text-[1rem] font-[400] hover:underline" href="index.html">Profiles</a>
+            <a class=" text-gray-950 text-[1rem] font-[400] hover:underline" href="transaction.html">Transactions</a>
             <a class=" text-gray-950 text-[1rem] font-[400] hover:underline" href="#">Budgets</a>
             <a class=" text-gray-950 text-[1rem] font-[400] hover:underline" href="#">Report</a>
             <a class=" text-gray-950 text-[1rem] font-[400] hover:underline" href="#">Settings</a>
@@ -31,12 +31,12 @@
 
     <!-- ----------- ADDING EXPENSE SECTION ---------------- -->
      <section class="mx-5 block p-[24px] bg-[#fff] m-5 rounded-lg shadow-lg">
-        <form class="flex justify-evenly items-center gap-4 mb-5 max-md:flex max-lg:flex-col ">
+        <form class="block space-y-4 mb-4">
             <!-- -------expense------- -->
-            <div class="bg-[#7bf064] flex flex-col space-y-2 p-4 rounded-md shadow-lg w-[400px] max-[460px]:w-[300px]  max-[380px]:w-[200px]">
+            <div class="bg-gray-100 flex flex-col space-y-2 p-4 rounded-md shadow-lg w-[100%]">
                 <label class="text-[0.9rem] text-gray-950 font-[500]" for="expense">Expense Name</label>
                 <input 
-                    class="bg-gray-100 h-[40px] border-[1px] outline-gray-400 border-[#584242] px-2 rounded-md"
+                    class="bg-gray-50 h-[40px] outline-gray-400 border-1 border-gray-400 px-2 rounded-md"
                     type="text"
                     placeholder="Expense Name"
                     id="expense"
@@ -45,10 +45,10 @@
             </div>
 
             <!-- ---- amount ------- -->
-            <div class="bg-[#7bf064] flex flex-col space-y-2 p-4 rounded-md shadow-lg w-[400px] max-[460px]:w-[300px] max-[380px]:w-[200px]">
+            <div class="bg-gray-100 flex flex-col space-y-2 p-4 rounded-md shadow-lg w-[100%]">
                 <label class="text-[0.9rem] text-gray-950 font-[500]" for="amount">Amount</label>
                 <input 
-                    class="bg-gray-100 h-[40px] border-[1px] outline-gray-400 border-[#584242] px-2 rounded-md"
+                    class="bg-gray-50 h-[40px] outline-gray-400 border-1 border-gray-400 px-2 rounded-md"
                     type="number"
                     placeholder="Amount"
                     id="amount"
@@ -57,10 +57,10 @@
             </div>
 
             <!-- ------- -->
-            <div class="bg-[#7bf064] flex flex-col space-y-2 p-4 rounded-md shadow-lg w-[400px] max-[460px]:w-[300px] max-[380px]:w-[200px]">
+            <div class="bg-gray-100 flex flex-col space-y-2 p-4 rounded-md shadow-lg w-[100%]">
                 <label class="text-[0.9rem] text-gray-950 font-[500]" for="date">Date</label>
                 <input 
-                    class="bg-gray-100 h-[40px] border-[1px] outline-gray-400 border-[#584242] px-2 rounded-md"
+                    class="bg-gray-50 h-[40px] outline-gray-400 border-1 border-gray-400 px-2 rounded-md"
                     type="date"
                     placeholder=""
                     id="date"
@@ -69,10 +69,10 @@
             </div>
 
             <!-- -----categories---------- -->
-            <div class="bg-[#7bf064] flex flex-col space-y-2 p-4 rounded-md shadow-lg w-[400px] max-[460px]:w-[300px] max-[380px]:w-[200px]">
+            <div class="bg-gray-100 flex flex-col space-y-2 p-4 rounded-md shadow-lg w-[100%]">
                 <label class="text-[0.9rem] text-gray-950 font-[500]" for="expense">Category</label>
                 <select 
-                    class="bg-gray-100 h-[40px] border-[1px] outline-gray-400 border-[#584242] px-2 rounded-md"
+                    class="bg-gray-50 h-[40px] outline-gray-400 border-1 border-gray-400 px-2 rounded-md"
                     name="categories" 
                     id="categories">
                     <option value="#" disabled selected>Select Category</option>
@@ -85,7 +85,7 @@
         </form>
         
         <button 
-            class="block items-center gap-2 w-[calc(100%-100px)] max-[350px]:w-[100%] rounded-md shadow-md h-[40px] m-auto bg-[#20b601] hover:bg-[#1fb601e5] cursor-pointer text-gray-50 font-[600] px-4 "
+            class="block items-center gap-2 w-[100%] rounded-md shadow-md h-[40px] m-auto bg-green-400 hover:bg-green-300 hover:text-gray-600 cursor-pointer text-gray-50 font-[600] px-4"
             type="submit">
                 <i class="text-[0.8rem] fa-solid fa-plus"></i>
                 Add Expense
@@ -93,21 +93,29 @@
      </section>
 
     <!-- ------------- EXPENSE REC0RD ------------------------ -->
-     <section class="m-5 block p-[24px] bg-[#fff] rounded-md shadow-xl">
+     <section class="m-5 block p-[24px] bg-[#fff] rounded-lg shadow-xl">
         <h1 class="text-center text-[1.5rem] font-[600] mb-3">Expense Record</h1>
 
-        <div class="flex flex-col p-4">
-            <table class="bg-slate-50">
-                <tr>
-                    <th class="border-[1px] h-9 max-sm:h-6 max-sm:text-[0.6rem]">Expense Name</th>
-                    <th class="border-[1px] h-9 max-sm:h-6 max-sm:text-[0.6rem]">Amount</th>
-                    <th class="border-[1px] h-9 max-sm:h-6 max-sm:text-[0.6rem]">Date</th>
-                    <th class="border-[1px] h-9 max-sm:h-6 max-sm:text-[0.6rem]">Category</th>
-                    <th class="border-[1px] h-9 max-sm:h-6 max-sm:text-[0.6rem]">Credit/Debit</th>
+        <div class="flex flex-col bg-gray-100 border-1 rounded-lg shadow-xl">
+            <table class= "rounded-md ">
+                <tr class="">
+                    <th class="h-9 max-sm:h-6 border-r-1 max-sm:text-[0.6rem]">Expense Name</th>
+                    <th class="h-9 max-sm:h-6 border-r-1 max-sm:text-[0.6rem]">Amount</th>
+                    <th class="h-9 max-sm:h-6 border-r-1 max-sm:text-[0.6rem]">Date</th>
+                    <th class="h-9 max-sm:h-6 border-r-1 max-sm:text-[0.6rem]">Category</th>
+                    <th class="h-9 max-sm:h-6 max-sm:text-[0.6rem]">Credit/Debit</th>
                 </tr>
+
+                <!-- <tr>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr> -->
             </table>
 
-            <div class="h-[60px] bg-slate-50 text-center border-[1px] border-t-0" >
+            <div class="h-[60px] text-center border-t-1" >
                 <p class="text-[1rem] mt-4 font-bold text-gray-500 max-sm:text-[0.8rem]">No expenses recorded</p>
             </div>
         </div>
