@@ -15,15 +15,19 @@
         >
             Expense Tracker
         </h1>
-        <div class="flex justify-evenly max-[790px]:hidden space-x-10">
-            <a class=" text-gray-950 text-[1rem] font-[400] hover:underline" href="index.html">Profiles</a>
+        <div class="flex justify-evenly items-center max-[870px]:hidden space-x-10">
+            <a class=" text-gray-950 text-[1rem] font-[400] hover:underline" href="index.html">Home</a>
             <a class=" text-gray-950 text-[1rem] font-[400] hover:underline" href="transaction.html">Transactions</a>
             <a class=" text-gray-950 text-[1rem] font-[400] hover:underline" href="#">Budgets</a>
             <a class=" text-gray-950 text-[1rem] font-[400] hover:underline" href="#">Report</a>
             <a class=" text-gray-950 text-[1rem] font-[400] hover:underline" href="#">Settings</a>
+
+            <div class="ml-2">
+                <a href="profile.html"><i class="text-green-300 text-[1.6rem] fa-regular fa-circle-user"></i></a>
+            </div>
         </div>
 
-        <div class="hidden items-center max-[790px]:flex">
+        <div class="hidden items-center max-[870px]:flex">
             <i class=" text-gray-950 text-[1.2rem] font-[400] fa-solid fa-bars"></i>
         </div>
     </nav>
@@ -31,9 +35,9 @@
 
     <!-- ----------- ADDING EXPENSE SECTION ---------------- -->
      <section class="mx-5 block p-[24px] bg-[#fff] m-5 rounded-lg shadow-lg">
-        <form class="block space-y-4 mb-4">
+        <form class="grid grid-cols-2 gap-4 mb-4 max-sm:grid-cols-1">
             <!-- -------expense------- -->
-            <div class="bg-gray-100 flex flex-col space-y-2 p-4 rounded-md shadow-lg w-[100%]">
+            <div class="bg-green-50 flex flex-col space-y-2 p-4 rounded-md shadow-lg w-[100%]">
                 <label class="text-[0.9rem] text-gray-950 font-[500]" for="expense">Expense Name</label>
                 <input 
                     class="bg-gray-50 h-[40px] outline-gray-400 border-1 border-gray-400 px-2 rounded-md"
@@ -45,7 +49,7 @@
             </div>
 
             <!-- ---- amount ------- -->
-            <div class="bg-gray-100 flex flex-col space-y-2 p-4 rounded-md shadow-lg w-[100%]">
+            <div class="bg-green-50 flex flex-col space-y-2 p-4 rounded-md shadow-lg w-[100%]">
                 <label class="text-[0.9rem] text-gray-950 font-[500]" for="amount">Amount</label>
                 <input 
                     class="bg-gray-50 h-[40px] outline-gray-400 border-1 border-gray-400 px-2 rounded-md"
@@ -57,19 +61,19 @@
             </div>
 
             <!-- ------- -->
-            <div class="bg-gray-100 flex flex-col space-y-2 p-4 rounded-md shadow-lg w-[100%]">
+            <div class="bg-green-50 flex flex-col space-y-2 p-4 rounded-md shadow-lg w-[100%]">
                 <label class="text-[0.9rem] text-gray-950 font-[500]" for="date">Date</label>
                 <input 
                     class="bg-gray-50 h-[40px] outline-gray-400 border-1 border-gray-400 px-2 rounded-md"
                     type="date"
-                    placeholder=""
+                    placeholder="dd/mm/yy"
                     id="date"
                     required
                 />
             </div>
 
             <!-- -----categories---------- -->
-            <div class="bg-gray-100 flex flex-col space-y-2 p-4 rounded-md shadow-lg w-[100%]">
+            <div class="bg-green-50 flex flex-col space-y-2 p-4 rounded-md shadow-lg w-[100%]">
                 <label class="text-[0.9rem] text-gray-950 font-[500]" for="expense">Category</label>
                 <select 
                     class="bg-gray-50 h-[40px] outline-gray-400 border-1 border-gray-400 px-2 rounded-md"
@@ -96,14 +100,14 @@
      <section class="m-5 block p-[24px] bg-[#fff] rounded-lg shadow-xl">
         <h1 class="text-center text-[1.5rem] font-[600] mb-3">Expense Record</h1>
 
-        <div class="flex flex-col bg-gray-100 border-1 rounded-lg shadow-xl">
+        <div class="flex flex-col bg-green-50 border-1 rounded-lg shadow-xl">
             <table class= "rounded-md ">
                 <tr class="">
-                    <th class="h-9 max-sm:h-6 border-r-1 max-sm:text-[0.6rem]">Expense Name</th>
-                    <th class="h-9 max-sm:h-6 border-r-1 max-sm:text-[0.6rem]">Amount</th>
                     <th class="h-9 max-sm:h-6 border-r-1 max-sm:text-[0.6rem]">Date</th>
+                    <th class="h-9 max-sm:h-6 border-r-1 max-sm:text-[0.6rem]">Expense Name</th>
                     <th class="h-9 max-sm:h-6 border-r-1 max-sm:text-[0.6rem]">Category</th>
-                    <th class="h-9 max-sm:h-6 max-sm:text-[0.6rem]">Credit/Debit</th>
+                    <th class="h-9 max-sm:h-6 border-r-1 max-sm:text-[0.6rem]">Payment Method</th>
+                    <th class="h-9 max-sm:h-6 max-sm:text-[0.6rem]">Amount</th>
                 </tr>
 
                 <!-- <tr>
