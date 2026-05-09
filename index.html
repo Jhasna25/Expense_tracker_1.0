@@ -21,7 +21,7 @@
             <a class=" text-gray-900 text-[1rem] font-[400] hover:underline" href="transaction.html">Transactions</a>
             <a class=" text-gray-900 text-[1rem] font-[400] hover:underline" href="budget.html">Budgets</a>
             <a class=" text-gray-900 text-[1rem] font-[400] hover:underline" href="#">Report</a>
-            <a class=" text-gray-900 text-[1rem] font-[400] hover:underline" href="#">Settings</a>
+            <a class=" text-gray-900 text-[1rem] font-[400] hover:underline" href="settings.html">Settings</a>
 
             <div class="ml-2">
                 <a href="profile.html"><i class="text-green-500 text-[1.6rem] fa-regular fa-circle-user"></i></a>
@@ -36,7 +36,7 @@
 
     <!-- ----------- ADDING EXPENSE SECTION ---------------- -->
      <section class="mx-5 block m-5 bg-[#fff] p-15 rounded-md shadow-lg">
-         <h1 class="flex items-center p-4 h-11 mb-4 justify-center gap-2 text-green-600 text-[1.2rem] font-[500]">Add your expenses here</h1>
+        <h1 class="flex items-center p-4 h-11 mb-4 justify-center gap-2 text-green-600 text-[1.2rem] font-[500]">Add your expenses here</h1>
 
         <form class="grid grid-cols-2 gap-8 mb-4 max-sm:grid-cols-1">
             <!-- -------expense------- -->
@@ -77,7 +77,7 @@
 
             <!-- -----categories---------- -->
             <div class="flex flex-col space-y-2 w-[100%]">
-                <label class="text-[0.9rem] text-gray-900 font-[500]" for="expense">Category</label>
+                <label class="text-[0.9rem] text-gray-900 font-[500]" for="category">Category</label>
                 <select 
                     class="bg-gray-50 h-[40px] outline-gray-400 border-1 border-gray-400 px-2 rounded-md"
                     name="categories" 
@@ -91,6 +91,7 @@
             </div>
         </form>
         
+        <!-- button -->
         <button 
             class="block items-center gap-2 w-[100%] rounded-md shadow-md h-[40px] m-auto bg-green-400 hover:bg-green-300 hover:text-gray-600 cursor-pointer text-gray-100 font-[600]"
             type="submit">
