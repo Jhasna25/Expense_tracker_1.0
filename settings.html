@@ -9,7 +9,7 @@
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
 </head>
 </head>
-<body class="bg-[#c0ffb4]">
+<body class="bg-green-300/50">
     <!-- ----------- NAVIGATION BAR ----------- -->
     <nav class="flex justify-between items-center p-6 bg-[#fff] m-5 rounded-md shadow-xl">
         <h1 class="text-gray-900 text-[1.6rem] font-[800]">
@@ -19,7 +19,6 @@
             <a class=" text-gray-900 text-[1rem] font-[400] hover:underline" href="index.html">Home</a>
             <a class=" text-gray-900 text-[1rem] font-[400] hover:underline" href="transaction.html">Transactions</a>
             <a class=" text-gray-900 text-[1rem] font-[400] hover:underline" href="budget.html">Budgets</a>
-            <a class=" text-gray-900 text-[1rem] font-[400] hover:underline" href="#">Report</a>
             <a class=" text-green-600 text-[1.1rem] font-[600] hover:underline" href="settings.html">Settings</a>
 
             <div class="ml-2">
@@ -27,9 +26,17 @@
             </div>
         </div>
 
-        <div class="hidden items-center max-[870px]:flex">
-            <i class=" text-gray-900 text-[1.2rem] font-[400] fa-solid fa-bars"></i>
-        </div>
+        <select 
+            class="hidden text-[1rem] font-bold bg-green-100/50 border-1 border-gray-300/80 shadow-md p-2 max-[870px]:flex"
+            name="menu" 
+            id="menu">
+            <option value="menu" disabled selected><a href=""></a>Menu</option>
+            <option value="index"><a href="index.html"></a>Home</option>
+            <option value="transaction"><a href="transaction.html">Transaction</a></option>
+            <option value="budget"><a href="budget.html"></a>Budgets</option>
+            <option value="setting"><a href="settings.html">Settings</a></option>
+            <option value="profile"><a href="profile.html">Profile</a></option>
+        </select>
     </nav>
 
     <!-- --------------------MAIN SECTION--------------------------------- -->
